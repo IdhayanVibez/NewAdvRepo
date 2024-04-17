@@ -31,10 +31,10 @@ from strings import get_string
 NEXI_VID = [
 "https://telegra.ph/file/1b0e822e4e475ba71d7bd.mp4",
 "https://telegra.ph/file/cb862d1ea374b73fbe78a.mp4",
-"https://graph.org/file/83ebf52e8bbf138620de7.mp4",
-"https://graph.org/file/82fd67aa56eb1b299e08d.mp4",
-"https://graph.org/file/318eac81e3d4667edcb77.mp4",
-"https://graph.org/file/7c1aa59649fbf3ab422da.mp4",
+"https://telegra.ph/file/bad1bf67a291b3d3c5bae.mp4",
+"https://telegra.ph/file/d84709aca2d98b96076cb.mp4",
+"https://telegra.ph/file/686745dc89b8fb29fcb68.mp4",
+"https://telegra.ph/file/514f01f4e27bd8666055b.mp4",
 "https://graph.org/file/2a7f857f31b32766ac6fc.mp4",
 
 ]
@@ -63,7 +63,7 @@ async def start_pm(client, message: Message, _):
                 )
             return
         if name[0:3] == "inf":
-            m = await message.reply_text("🔎")
+            m = await message.reply_text("💋")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
