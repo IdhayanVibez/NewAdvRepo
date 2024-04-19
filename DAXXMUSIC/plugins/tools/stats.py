@@ -24,7 +24,7 @@ from config import BANNED_USERS
 async def stats_global(client, message: Message, _):
     upl = stats_buttons(_, True if message.from_user.id in SUDOERS else False)
     await message.reply_photo(
-        photo=config.STATS_IMG_URL,
+        photo="https://telegra.ph/file/a5352b951412de9ec37c7.jpg",
         caption=_["gstats_2"].format(app.mention),
         reply_markup=upl,
     )
@@ -63,12 +63,12 @@ async def overall_stats(client, CallbackQuery, _):
         config.AUTO_LEAVING_ASSISTANT,
         config.DURATION_LIMIT_MIN,
     )
-    med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
+    med = InputMediaPhoto(media="https://telegra.ph/file/a5352b951412de9ec37c7.jpg", caption=text)
     try:
         await CallbackQuery.edit_message_media(media=med, reply_markup=upl)
     except MessageIdInvalid:
         await CallbackQuery.message.reply_photo(
-            photo=config.STATS_IMG_URL, caption=text, reply_markup=upl
+            photo="https://telegra.ph/file/a5352b951412de9ec37c7.jpg", caption=text, reply_markup=upl
         )
 
 
@@ -131,5 +131,5 @@ async def bot_stats(client, CallbackQuery, _):
         await CallbackQuery.edit_message_media(media=med, reply_markup=upl)
     except MessageIdInvalid:
         await CallbackQuery.message.reply_photo(
-            photo=config.STATS_IMG_URL, caption=text, reply_markup=upl
+            photo="https://telegra.ph/file/a5352b951412de9ec37c7.jpg", caption=text, reply_markup=upl
         )
