@@ -175,32 +175,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         await CallbackQuery.message.reply_text(
             _["admin_5"].format(mention), reply_markup=close_markup(_)
         )
-      elif command == "Shuffle":
-        check = db.get(chat_id)
-        if not check:
-            return await CallbackQuery.answer(
-                _["admin_15"], show_alert=True
-            )
-        try:
-            popped = check.pop(0)
-        except:
-            return await CallbackQuery.answer(
-                _["admin_15"], show_alert=True
-            )
-        check = db.get(chat_id)
-        if not check:
-            check.insert(0, popped)
-            return await CallbackQuery.answer(
-                _["admin_15"], show_alert=True
-            )
-        await CallbackQuery.answer()
-        random.shuffle(check)
-        check.insert(0, popped)
-        await CallbackQuery.message.reply_text(
-            _["admin_16"].format(mention)
-        )
-        await CallbackQuery.message.delete()
-    elif command == "Skip" or command == "Replay":
+      elif command == "Skip" or command == "Replay":
         check = db.get(chat_id)
         if command == "Skip":
             txt = f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
