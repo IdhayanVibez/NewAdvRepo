@@ -126,7 +126,7 @@ async def bot_stats(client, CallbackQuery, _):
         call["collections"],
         call["objects"],
     )
-    med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
+    med = InputMediaPhoto(media="https://telegra.ph/file/a5352b951412de9ec37c7.jpg", caption=text)
     try:
         await CallbackQuery.edit_message_media(media=med, reply_markup=upl)
     except MessageIdInvalid:
