@@ -24,6 +24,37 @@ from DAXXMUSIC.utils.logger import play_logs
 from DAXXMUSIC.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
+EMOJI = [
+    "💞",
+    "🔎",
+    "🔍",
+    "🧪",
+    "💣",
+    "⚡️",
+    "🔥",
+    "🕺",
+    "🎩",
+    "🌈",
+    "🍷",
+    "🥂",
+    "🍾",
+    "🥃",
+    "🥤",
+    "🍽",
+    "🍭",
+    "🚗",
+    "🚕",
+    "🚓",
+    "🚑",
+    "🚀",
+    "💎",
+    "🔮",
+    "🪄",
+    "💌",
+    "⁉️",
+    "💤",
+    "🧨"
+]
 
 @app.on_message(
    filters.command(["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce"] ,prefixes=["/", "!", "%", ",", "", ".", "@", "#"])
